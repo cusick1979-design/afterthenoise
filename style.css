@@ -1,4 +1,4 @@
-/* Reset basics */
+/* Basic reset */
 body, h1, h2, p {
   margin: 0;
   padding: 0;
@@ -13,20 +13,18 @@ body {
   padding: 20px;
 }
 
-/* Header and logo */
+/* Header & Logo */
 header {
   margin-bottom: 50px;
 }
 
 header .logo {
-  width: 300px;          /* Big logo */
-  max-width: 95%;        /* Scales on mobile */
+  width: 300px;       /* Large logo */
+  max-width: 95%;
   height: auto;
-  margin-bottom: 20px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 20px #ff6f61; /* subtle glow */
+  margin: 0 auto 20px;
+  box-shadow: 0 0 25px #ff6f61; /* Glow effect */
 }
 
 /* Header title */
@@ -59,11 +57,12 @@ section.about p {
   font-size: 1em;
 }
 
-/* Social icons */
+/* Social icons section */
 section.social {
   margin-bottom: 60px;
 }
 
+/* Icons styling */
 .icon {
   display: inline-block;
   width: 60px;
@@ -78,7 +77,7 @@ section.social {
   transform: scale(1.2);
 }
 
-/* Social icon images (colored) */
+/* Social icon images (colored, not black) */
 .icon.youtube { background-image: url('icons/youtube-colored.png'); }
 .icon.instagram { background-image: url('icons/instagram-colored.png'); }
 .icon.tiktok { background-image: url('icons/tiktok-colored.png'); }
@@ -103,7 +102,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 600px) {
   h1 { font-size: 2em; }
   .icon { width: 45px; height: 45px; margin: 0 6px; }
