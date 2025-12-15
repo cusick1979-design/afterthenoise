@@ -581,22 +581,27 @@ To be continued.....          </strong></p>
   <a href="mailto:AfterTheNoise@proton.me" style="color:#aaa;">AfterTheNoise@proton.me</a>
 </footer>
 
-<script>
+  <script>
   document.querySelectorAll('.accordion-header').forEach(header => {
-    const content = header.nextElementSibling;
-
-    if (header.dataset.open === 'true') {
-      content.classList.add('open');
-      content.style.maxHeight = content.scrollHeight + 'px';
-    }
-
     header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
       const isOpen = content.classList.contains('open');
-      content.classList.toggle('open');
-      content.style.maxHeight = isOpen ? null : content.scrollHeight + 'px';
+
+      // close all panels
+      document.querySelectorAll('.accordion-content').forEach(c => {
+        c.classList.remove('open');
+        c.style.maxHeight = null;
+      });
+
+      // open clicked panel if it was closed
+      if (!isOpen) {
+        content.classList.add('open');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
     });
   });
 </script>
+
 
 
 
