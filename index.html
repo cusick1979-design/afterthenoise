@@ -179,6 +179,358 @@
         <p><strong>Chapter Eight</strong> — After the Noise</p>
       </div>
 
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Two – Sneak Peek Accordion</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      padding: 40px 16px;
+    }
+
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .toc {
+      background: #111;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 18px 18px 14px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.45);
+    }
+
+    .toc h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: .02em;
+      opacity: .95;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 18px;
+      color: #cfcfcf;
+      line-height: 1.6;
+    }
+
+    .threshold {
+      margin: 18px 2px 16px;
+      padding: 16px 16px;
+      border-left: 3px solid rgba(255,255,255,.20);
+      background: rgba(255,255,255,.03);
+      border-radius: 14px;
+      color: #eaeaea;
+      line-height: 1.55;
+      font-size: 16px;
+    }
+
+    .threshold p { margin: 0; }
+
+    .cover {
+      margin: 18px 0 18px;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: #151515;
+      box-shadow: 0 18px 40px rgba(0,0,0,.45);
+    }
+
+    .cover img {
+      width: min(420px, 100%);
+      height: auto;
+      border-radius: 12px;
+      display: block;
+      filter: grayscale(1);
+    }
+
+    .cover .placeholder {
+      width: min(420px, 100%);
+      aspect-ratio: 2 / 3;
+      border-radius: 12px;
+      border: 1px dashed rgba(255,255,255,.22);
+      display: grid;
+      place-items: center;
+      color: rgba(255,255,255,.65);
+      text-align: center;
+      padding: 18px;
+      line-height: 1.45;
+    }
+
+    .accordion {
+      border-radius: 18px;
+      overflow: hidden;
+      background: #151515;
+      box-shadow: 0 20px 40px rgba(0,0,0,.5);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .accordion-item:last-child {
+      border-bottom: none;
+    }
+
+    .accordion-header {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 18px 18px;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 650;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
+      gap: 12px;
+    }
+
+    .accordion-header:hover {
+      background: rgba(255,255,255,.03);
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .chip {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.16);
+      color: rgba(255,255,255,.80);
+      white-space: nowrap;
+    }
+
+    .chip.locked {
+      border-color: rgba(255,255,255,.10);
+      color: rgba(255,255,255,.55);
+    }
+
+    .accordion-icon {
+      width: 18px;
+      height: 18px;
+      display: grid;
+      place-items: center;
+      transition: transform .25s ease;
+      opacity: .9;
+      flex: 0 0 auto;
+    }
+
+    .accordion-header.active .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, padding .3s ease;
+      padding: 0 18px;
+      color: #cfcfcf;
+      line-height: 1.65;
+    }
+
+    .accordion-content.open {
+      padding: 0 18px 16px;
+    }
+
+    .muted {
+      color: rgba(255,255,255,.68);
+    }
+
+    .locked-box {
+      margin-top: 10px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.16);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    .cta:hover { background: rgba(255,255,255,.05); }
+
+    .spacer { height: 16px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Book Two TOC (place this directly under Book One on your page) -->
+    <section class="toc" id="book-two">
+      <h2>Book Two — Table of Contents</h2>
+      <ol>
+        <li>Chapter I</li>
+        <li>Chapter II</li>
+        <li>Chapter III</li>
+        <li>Chapter IV</li>
+      </ol>
+    </section>
+
+    <!-- 3-sentence threshold (locked in) -->
+    <div class="threshold">
+      <p><strong>I’ve been through this shit, and I’m still in it.</strong><br>
+      If you’re reading this, you’re not weak — you’re just tired of pretending what you’ve been doing was working.<br>
+      Open a chapter if you want. Worst case, it’s five minutes you don’t spend bullshitting yourself.</p>
+    </div>
+
+    <!-- Front cover (swap placeholder for your real image) -->
+    <section class="cover" aria-label="Book Two Front Cover">
+      <!-- OPTION A: Use a real image -->
+      <!-- <img src="book-two-front-cover.jpg" alt="Book Two front cover" /> -->
+
+      <!-- OPTION B: Placeholder (remove when you add your cover image) -->
+      <div class="placeholder">
+        <div>
+          <div style="font-weight:700; margin-bottom:6px;">Front Cover Placeholder</div>
+          <div class="muted">Drop your Book Two cover image here.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accordion: Chapters (1 and 4 open/available; 2 and 3 locked) -->
+    <div class="accordion" aria-label="Book Two Sneak Peek">
+
+      <div class="accordion-item">
+        <button class="accordion-header" type="button" data-default-open="true">
+          <span class="left">
+            <span class="chip">Sneak Peek</span>
+            <span>Chapter I</span>
+          </span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p><strong>Add your flavor here.</strong></p>
+          <p class="muted">(This is where you’ll paste the public-facing part of Chapter I.)</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" type="button">
+          <span class="left">
+            <span class="chip locked">Locked</span>
+            <span>Chapter II</span>
+          </span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="locked-box">
+            <p><strong>Locked for launch.</strong></p>
+            <p class="muted">This chapter opens when Book One goes live.</p>
+            <a class="cta" href="#book-one">Book One (coming soon)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" type="button">
+          <span class="left">
+            <span class="chip locked">Locked</span>
+            <span>Chapter III</span>
+          </span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="locked-box">
+            <p><strong>Locked for launch.</strong></p>
+            <p class="muted">More soon. For now, keep your feet under you.</p>
+            <a class="cta" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" type="button" data-default-open="true">
+          <span class="left">
+            <span class="chip">Sneak Peek</span>
+            <span>Chapter IV</span>
+          </span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p><strong>Add your flavor here.</strong></p>
+          <p class="muted">(This is where you’ll paste the public-facing part of Chapter IV — where the spiritual truth starts to show up.)</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="spacer"></div>
+
+  </div>
+
+  <script>
+    // Multi-open accordion (so Chapter I and IV can both be open)
+    const headers = document.querySelectorAll('.accordion-header');
+
+    function openPanel(header) {
+      const content = header.nextElementSibling;
+      header.classList.add('active');
+      content.classList.add('open');
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+
+    function closePanel(header) {
+      const content = header.nextElementSibling;
+      header.classList.remove('active');
+      content.classList.remove('open');
+      content.style.maxHeight = null;
+    }
+
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const isOpen = header.classList.contains('active');
+        if (isOpen) closePanel(header);
+        else openPanel(header);
+      });
+    });
+
+    // Open defaults (I & IV)
+    headers.forEach(header => {
+      if (header.dataset.defaultOpen === 'true') {
+        openPanel(header);
+      }
+    });
+
+    // Recalculate heights on resize
+    window.addEventListener('resize', () => {
+      headers.forEach(header => {
+        if (header.classList.contains('active')) {
+          const content = header.nextElementSibling;
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
     </div>
   </section>
 
