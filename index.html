@@ -566,19 +566,21 @@ To be continued.....          </strong></p>
 
 <script>
   document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const content = header.nextElementSibling;
-      const open = content.classList.contains('open');
-      content.classList.toggle('open');
-      content.style.maxHeight = open ? null : content.scrollHeight + 'px';
-    });
+    const content = header.nextElementSibling;
 
     if (header.dataset.open === 'true') {
-      const content = header.nextElementSibling;
+      content.classList.add('open');
       content.style.maxHeight = content.scrollHeight + 'px';
     }
+
+    header.addEventListener('click', () => {
+      const isOpen = content.classList.contains('open');
+      content.classList.toggle('open');
+      content.style.maxHeight = isOpen ? null : content.scrollHeight + 'px';
+    });
   });
 </script>
+
 
 </body>
 </html>
