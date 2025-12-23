@@ -206,6 +206,24 @@
   max-width: 720px;
   margin: 0 auto;
 }
+    /* Responsive Video Embed */
+.video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 36px auto;
+  padding-top: 56.25%; /* 16:9 ratio */
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
   </style>
 </head>
 
@@ -222,9 +240,13 @@
   CBT, and timeless principles to help you think clearly and move forward.
 </p>
 <div style="margin:36px auto 28px; max-width:960px;">
-  <div style="position:relative; padding-top:56.25%; height:0; overflow:hidden;">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/mNISYycqcEA?si=UqfK7ShY4GQmOhhJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
+  <div class="video-wrap">
+  <iframe
+    src="https://www.youtube.com/embed/mNISYycqcEA"
+    title="After The Noise Video"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
 </div>
 
 <div class="social">
@@ -270,14 +292,15 @@
   Buy “After The Noise” on Amazon
 </a>
   
-<div>
+<div class="video-wrap">
   <iframe
-      src="https://www.youtube.com/embed/GQGATiSi7Eo"
-      style="position:absolute; top:0; left:0; width:100%; height:100%;"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-</div> 
+    src="https://www.youtube.com/embed/GQGATiSi7Eo"
+    title="You Are Here – After The Noise"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
 <section id="book-two">  
 <h2 style="text-align:center; margin-bottom:20px;">
 <hr style="
