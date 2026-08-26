@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <title>After The Noise | Recovery, Discipline, Signal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="After The Noise is a recovery and mindset project about clarity, accountability, discipline, and finding signal in the noise.">
+  <meta name="theme-color" content="#121212">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="After The Noise | Recovery, Discipline, Signal">
+  <meta property="og:description" content="Clarity before movement. Accountability before comfort. Find signal in the noise.">
+  <meta property="og:image" content="https://cusick1979-design.github.io/afterthenoise/assets/icons/afterthenoise-logo.png">
+  <meta property="og:url" content="https://cusick1979-design.github.io/afterthenoise/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://cusick1979-design.github.io/afterthenoise/">
+  <link rel="icon" type="image/png" href="assets/icons/afterthenoise-logo.png">
 
   <style>
     * { box-sizing: border-box; }
@@ -157,6 +167,12 @@
       cursor: pointer;
       text-align: left;
     }
+
+    .accordion-header:focus-visible {
+      outline: 3px solid #ff6f61;
+      outline-offset: -3px;
+    }
+
 .accordion-content {
   max-height: 0;
   overflow: hidden;
@@ -230,11 +246,11 @@
 <body>
 
 <header>
-  <img src="assets/icons/afterthenoise-logo.png" alt="After The Noise Logo">
+  <img src="assets/icons/afterthenoise-logo.png" alt="After The Noise Logo" width="657" height="395" decoding="async" fetchpriority="high">
   <h1>Find Signal in the Noise</h1>
 </header>
-  <audio controls autoplay>
-  <source src="assets/icons/After The Noise.mp3" type="audio/mp3">
+  <audio controls preload="metadata" aria-label="Listen to After The Noise">
+  <source src="assets/icons/After The Noise.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
@@ -257,7 +273,7 @@
     title="After The Noise"
     loading="lazy"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
+    allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
   </iframe>
 </div>
 
@@ -274,22 +290,20 @@
 </div>
 
 <div class="social">
-  <a href="https://www.youtube.com/channel/UCRc_uOHpUM5YdS4oajNoo2A" target="_blank">YouTube</a>
-  <a href="https://www.facebook.com/AfterTheNoise/" target="_blank">Facebook</a>
-  <a href="https://vm.tiktok.com/ZPHwqAjVBFtyg-noBrt/" target="_blank">TikTok</a>
-  <a href="https://x.com/AfterTheNoiseHQ" target="_blank">X (Twitter)</a>
-  <a href="http://www.buymeacoffee.com/AfterTheNoise" target="_blank">Tip Jar It helps</a>
+  <a href="https://www.youtube.com/channel/UCRc_uOHpUM5YdS4oajNoo2A" target="_blank" rel="noopener noreferrer">YouTube</a>
+  <a href="https://www.facebook.com/AfterTheNoise/" target="_blank" rel="noopener noreferrer">Facebook</a>
+  <a href="https://vm.tiktok.com/ZPHwqAjVBFtyg-noBrt/" target="_blank" rel="noopener noreferrer">TikTok</a>
+  <a href="https://x.com/AfterTheNoiseHQ" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+  <a href="https://www.buymeacoffee.com/AfterTheNoise" target="_blank" rel="noopener noreferrer">Tip Jar It helps</a>
 </div>
   <div style="margin: 80px 0;"></div>
- <div class="video-wrap">
- 
 
 <div style="margin: 20px 0 35px;">
   <img
     src="assets/icons/afterthenoisehq_qr.png"
     alt="Follow After The Noise on Instagram"
     style="width:260px; max-width:90%; border-radius:18px; box-shadow:0 0 25px rgba(255,111,97,.45);"
-  >
+   loading="lazy" decoding="async">
 </div>
 
 <!-- INSTAGRAM BUTTON -->
@@ -315,7 +329,7 @@
 
 
  
-    <img src="assets/icons/afterthenoise-book-cover.png" class="book-cover" alt="Book cover">
+    <img src="assets/icons/afterthenoise-book-cover.png" class="book-cover" alt="Book cover" loading="lazy" decoding="async">
 
 
    <div class="book-blurb">
@@ -364,7 +378,7 @@
     src="assets/icons/logo-coloring-book.png"
     alt="After The Noise Coloring Book Cover"
     class="book-cover"
-  >
+   loading="lazy" decoding="async">
 
 </section>
 
@@ -375,23 +389,23 @@
     title="You Are Here – Idiolocator"
     loading="lazy"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
+    allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
   </iframe>
 </div>
 </div>
 
-<section id="book-two">  
-<h2 style="text-align:center; margin-bottom:20px;">
+<section id="book-two">
 <hr style="
   margin: 80px auto 60px;
   max-width: 220px;
   border: none;
   border-top: 1px solid rgba(255,255,255,.18);
 ">
+<h2 style="text-align:center; margin-bottom:20px;">
   Book Two — Idiolocator
 </h2>
 
-    <img src="assets/icons/booktwofrontlogo.png" class="book-cover" alt="Book Two Front Cover">
+    <img src="assets/icons/booktwofrontlogo.png" class="book-cover" alt="Book Two Front Cover" loading="lazy" decoding="async">
 
 
     <div class="threshold">
@@ -403,11 +417,11 @@
     <div class="accordion">
 
       <div class="accordion-item">
-        <button class="accordion-header">
+        <button class="accordion-header" type="button" id="chapter-1-header" aria-expanded="false" aria-controls="chapter-1-content">
           <span><span class="chip">Sneak Peek</span>Chapter I</span>
-          <span>+</span>
+          <span class="accordion-icon" aria-hidden="true">+</span>
         </button>
-        <div class="accordion-content">
+        <div class="accordion-content" id="chapter-1-content" role="region" aria-labelledby="chapter-1-header" aria-hidden="true">
           <strong>CHAPTER ONE — Don’t Lie to the Map</strong>
 
 <p>Nobody claps when you decide to stop running.</p>
@@ -593,31 +607,31 @@ Play the Tape Out
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-header">
+        <button class="accordion-header" type="button" id="chapter-2-header" aria-expanded="false" aria-controls="chapter-2-content">
           <span><span class="chip locked">Locked</span>Chapter II</span>
-          <span>+</span>
+          <span class="accordion-icon" aria-hidden="true">+</span>
         </button>
-        <div class="accordion-content">
+        <div class="accordion-content" id="chapter-2-content" role="region" aria-labelledby="chapter-2-header" aria-hidden="true">
           <p>Locked until launch.</p>
         </div>
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-header">
+        <button class="accordion-header" type="button" id="chapter-3-header" aria-expanded="false" aria-controls="chapter-3-content">
           <span><span class="chip locked">Locked</span>Chapter III</span>
-          <span>+</span>
+          <span class="accordion-icon" aria-hidden="true">+</span>
         </button>
-        <div class="accordion-content">
+        <div class="accordion-content" id="chapter-3-content" role="region" aria-labelledby="chapter-3-header" aria-hidden="true">
           <p>Locked until launch.</p>
         </div>
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-header">
+        <button class="accordion-header" type="button" id="chapter-4-header" aria-expanded="false" aria-controls="chapter-4-content">
           <span><span class="chip">Sneak Peek</span>Chapter IV</span>
-          <span>+</span>
+          <span class="accordion-icon" aria-hidden="true">+</span>
         </button>
-        <div class="accordion-content">
+        <div class="accordion-content" id="chapter-4-content" role="region" aria-labelledby="chapter-4-header" aria-hidden="true">
           <strong>CHAPTER FOUR — The Quiet Signal</strong>
 
 <p>There’s a point in recovery where something shifts — not loud, not dramatic, not the kind of thing you announce.</p>
@@ -720,32 +734,47 @@ To be continued.....
   </div>
 </section>
   <script>
-  document.addEventListener('DOMContentLoaded', () => {  
-  document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    const headers = Array.from(document.querySelectorAll('.accordion-header'));
+
+    const closePanel = (header) => {
       const content = header.nextElementSibling;
-      const isOpen = content.classList.contains('open');
+      header.setAttribute('aria-expanded', 'false');
+      content.setAttribute('aria-hidden', 'true');
+      content.classList.remove('open');
+      content.style.maxHeight = null;
+      header.querySelector('.accordion-icon').textContent = '+';
+    };
 
-      // close all panels
-      document.querySelectorAll('.accordion-content').forEach(c => {
-        c.classList.remove('open');
-        c.style.maxHeight = null;
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const isOpen = header.getAttribute('aria-expanded') === 'true';
+
+        headers.forEach(closePanel);
+
+        if (!isOpen) {
+          header.setAttribute('aria-expanded', 'true');
+          content.setAttribute('aria-hidden', 'false');
+          content.classList.add('open');
+          content.style.maxHeight = content.scrollHeight + 'px';
+          header.querySelector('.accordion-icon').textContent = '−';
+        }
       });
+    });
 
-      // open clicked panel if it was closed
-           if (!isOpen) {
-        content.classList.add('open');
+    window.addEventListener('resize', () => {
+      document.querySelectorAll('.accordion-content.open').forEach(content => {
         content.style.maxHeight = content.scrollHeight + 'px';
-      }
+      });
     });
   });
-});
 </script>
 
 
 
 <footer>
-  © 2025 After The Noise ·
+  © 2026 After The Noise ·
   <a href="mailto:AfterTheNoise@proton.me" style="color:#aaa;">AfterTheNoise@proton.me</a>
 </footer>
 <section class="author-note">
@@ -823,11 +852,4 @@ To be continued.....
 
 </section>
 </body>
-labor_rate = 125
-hours = float(input("Labor hours: "))
-parts = float(input("Parts cost: "))
-
-total = (labor_rate * hours) + parts
-
-print(f"Estimate: ${total:.2f}")
 </html>
